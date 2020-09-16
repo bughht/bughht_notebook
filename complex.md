@@ -27,6 +27,5 @@
     + Example $f(z)=\overline{z}$
         1. $f(z)=x-iy$
         2. not analytic
-+ $f(z)=\overline{z},Imz,Rez,|z|$ are not 
++ $f(z)=\overline{z},Imz,Rez,|z|$ are not analytic
 
-        
