@@ -63,5 +63,11 @@
 + Isobraic Process: $\Delta E=Q_p-W=\cfrac{m}{M}C_{p,m}(T_2-T_1)-\cfrac{m}{M}R(T_2-T_1)=\cfrac{m}{M}=(C_{p,m}-R)(T_2-T_1)=\cfrac{m}{M}C_{V,m}(T_2-T_1)$
 + Isothermal Process: $Q_T=W=\cfrac{m}{M}RT\ln\cfrac{V_2}{V_1}=\cfrac{m}{M}RT\ln\cfrac{p_1}{p_2}$
 + Adiabatic Process
-    + 
-
+    + $\Delta E=-W=\cfrac{m}{M}C_{V,m}(T_2,T_1)$
+    + Poisson Formula: $pV^{\gamma}=C_1$
+        + $TV^{\gamma-1}=C_2$
+        + $p^{\gamma-1}T^{-\gamma}=C_3$
+    + Ideal Gas turn from $(p_1,V_1)$, for its middle $(p,V)$
+        + $p=\cfrac{p_1V_1^{\gamma}}{V^{\gamma}}$
+        + $W=\cfrac{p_1V_1}{\gamma-1}\big[1-\big(\cfrac{V_1}{V_2}\big)^{\gamma-1}\big]$
+        + $W=\cfrac{1}{\gamma-1}(p_1V_1-p_2V_2)$
