@@ -101,4 +101,20 @@
             + $i^i=e^{iLni}=e^{i(i(\pi/2+2k\pi ))}=e^{-(\pi /2+2k\pi)}$
 + **Homework 2.9(1)(4), 2.13(1)(2)(4), 2.14**
 
-        
++ Integration of Complex Function
+    + Complex Integral
+        + $\oint_Cf(z)dz=-\oint_{C^{-}}f(z)dz$
+        + If $f(z)=u(x,y)+iv(x,y)$ continuous on smooth curve $C$ from $a$ to $b$ ($u$,$v$ are continuous), $\int_C f(z)dz=\int_C udx-vdy+i(\int_C vdx+udy)$  
+            + If $f(z)$ is continuous function and $C$ is a smooth curve, integral $\int_Cf(z)dz$ exist.
+            + $\int_Cf(z)dz$ can be simplified into real variable function.
+        + Parametric Equation
+            + $z(t)=x(t)+iy(t)\qquad t: a\rightarrow b$ 
+        + **(Important!)**Parametric Equation method: *$\int_Cf(z)dz=\int_a^bf(z(t))z'(t)dt$
+        + Example:
+            + Prove: $I_n=\oint_C\cfrac{dz}{(z-z_0)^n}=2\pi i,\quad(n=1)\text{ or }0,\quad(n\in Z^+,n\not ={1})$ where $C:|z-z_0=r(>0)$
+                + $z(\theta)=z_0+re^{i\theta}$
+                + $\oint_C\cfrac{1}{(z-z_0)^n}dz=\int_0^{2\pi}ir^{1-n}e^{i(1-n)\theta}d\theta$
+                + $=ir^{1-n}\int_0^{2\pi}e^{i(1-n)\theta}d\theta=$ then split it into sin and cos.
+        + $|\int_Cf(z)dz|\leqslant\int_C|f(z)|ds$
+
+
