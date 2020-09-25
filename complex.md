@@ -116,5 +116,37 @@
                 + $\oint_C\cfrac{1}{(z-z_0)^n}dz=\int_0^{2\pi}ir^{1-n}e^{i(1-n)\theta}d\theta$
                 + $=ir^{1-n}\int_0^{2\pi}e^{i(1-n)\theta}d\theta=$ then split it into sin and cos.
         + $|\int_Cf(z)dz|\leqslant\int_C|f(z)|ds$
-
-
++ Cauchy Integral Theorm
+    + $f(z)$ integral in D is unrelated to path$\Leftrightarrow$ $\oint_lf(z)dz=0$
+    + If $F(z)$ is analytic in single connected region $D$, $\oint_Cf(z)dz=0$ for any contour $C$ in $D$.
+        + Example1:
+            + $f(z)=e^z,z^n,\sin z,\cos z$ analytic on $z$ area, $\oint_Cf(z)dz=0$ where C is a contour in the complex area.
+        + Example2: solve $\oint_C\cfrac{1}{z+2}dz, C:|z|=1$
+            + singular point: $z=-2$
+            + Construct $D$:
+               1. $-2\notin D$
+               2. $C \subset D$
+            + $D: |z|\leq 1.5$
+            + $\oint_C\cfrac{1}{z+2}dz=0$
+    + Cauchy integral theorm on complex connected region
+        + $f(z)$ is analytic in $D$ bounded in $C_1$ and $C_2$ (contours) and continuous on $\overline{D}=D+C_1+C_2$, then $\oint_{C_1}f(z)dz=\oint_{C_2}f(z)dz$
+        + $\oint_Cf(z)dz=\sum_{k=1}^{n}\oint_{C_{k}}f(z)dz$
+        + Example: solve $\oint_C\cfrac{1}{(z-1)(z+1)}dz$, $C:$ bound 1 and -1
+            + $f(z)=\cfrac{1}{(z-1)(z+1)}=\cfrac{1}{2}\big(\cfrac{1}{z-1}-\cfrac{1}{z+1}\big)$
+            + Construct $C_1$, $C_2$ around -1 and 1.
+            + $\oint_Cf(z)dz=\oint_{C_1}f(z)dz+\oint_{C_1}f(z)dz$
+                + $=\oint_{C_1}(\cfrac{1}{z-1}-\cfrac{1}{z+1})+\oint_{C_2}(\cfrac{1}{z-1}-\cfrac{1}{z+1})$
+                + $=0-2\pi i+2\pi i+ 0$
+                + $=0$
+    + $f(z)$ is analytic in $D$, $z_0\in D$, $F(z)$ is analytic in $D$ and $F'(z)=f(z)$
+    + $f(z)$ is analytic in single connect region $D$, $\int_{z_0}^{z_1}f(z)dz=F(z_1)-F(z_0), z_0,z_1\in D$ 
++ Calculate Complex Integration
+    + $C:$  not close
+        + Paramater
+        + N-L Formula 
+    + $C: $ contour
+        + Parameter
+        + Cauchy Theory
+        + Important Integral: $\int_c\cfrac{1}{(z-z_0)^n}dz=2\pi i(n=1)$ or $0$ ($n\not =1, n\in Z$)
+            + $C:|z-z_0|=r>0$
+        + 
