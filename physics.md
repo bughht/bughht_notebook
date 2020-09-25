@@ -71,3 +71,5 @@
         + $p=\cfrac{p_1V_1^{\gamma}}{V^{\gamma}}$
         + $W=\cfrac{p_1V_1}{\gamma-1}\big[1-\big(\cfrac{V_1}{V_2}\big)^{\gamma-1}\big]$
         + $W=\cfrac{1}{\gamma-1}(p_1V_1-p_2V_2)$
++ All above are bullshit, **Watch this**
+||||
