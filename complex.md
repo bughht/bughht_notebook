@@ -149,4 +149,31 @@
         + Cauchy Theory
         + Important Integral: $\int_c\cfrac{1}{(z-z_0)^n}dz=2\pi i(n=1)$ or $0$ ($n\not =1, n\in Z$)
             + $C:|z-z_0|=r>0$
-        + 
++ Cauchy Integral Formula
+    + If $f(z)$ is analytic in $D$ surrounded by contour $C$, continuous on $C$ and $D$, for all $z_0\in D$,
+        + $f(z_0)=\cfrac{1}{2\pi i}\oint_C\cfrac{f(z)}{z-z_0}dz$
+
+    + Application:$\oint_C\cfrac{f(z)}{z-z_0}=2\pi if(z_0)$
+        + where $g(z)=\cfrac{f(z)}{z-z_0}$, singular point $z_0$
+            $g(z)$ has only one sigular point $z_0$
+    + Example: $I_1=\oint_C\cfrac{\sin z}{z} dz, C:|z|=2$
+        + $g(z)=\cfrac{\sin z}{z}$, singular point $z=0$
+        + $I_1=2\pi i sin(0)$
+        + $=0$
+    + Example2: $I_2=\oint_{|z-i|=1}\cfrac{1}{z^2+i}dz$
+        + $g(z)=\cfrac{1}{z^2+i}$, singular point $z_0=\sqrt[n]{|z|}e^{i(\frac{-\pi/2+2k\pi)}{n}}, k \in {0,1}$
+        + $z_0=\cfrac{\cfrac{\sqrt{2}}{2}-\cfrac{\sqrt{2}}{2}i$, $z_1=-\cfrac{\sqrt{2}}{2}+\cfrac{\sqrt{2}}{2}i$
+        + $z_1$ in C
+        + $\oint_C\cfrac{1}{z^2+i}dz=\oint_C\cfrac{\cfrac{1}{z-z_0}}{z-z_1}dz=2\pi i \cfrac{1}{z-z_0}\bigg|_{z=z_1}=\cfrac{2\pi i}{-\sqrt{2}+\sqrt{2}i}=\cfrac{\sqrt{2}}{2}\pi(1-i)$
+    + Example3: $I_3=\oint_{|z|=2}\cfrac{e^z}{(z^2+1)(2z-1)}$
++ if $f(z)$ analytic on $D$, $f^{(n)}=\cfrac{n!}{2\pi i}\oint_C\cfrac{f(z)}{(z-z_0)^{n+1}},n\in N$
+    + $\oint_C\cfrac{f(z)}{(z-z_0)^{n+1}}=\cfrac{2\pi i }{n!}f^{(n)}(z_0)$
+    + Example: $I_1=\oint_{|z-i|=1}\cfrac{\cos z}{(z-i)^3}$
+        + $g(z)=\cfrac{\cos z}{(z-i)^3}$, singular point $z=i$
+        + $I_1=2\pi i\cfrac{(\cos z)''}{2!}\bigg|_{z=i}=\pi i (-\cos i)=-\pi i \cfrac{e^{-1}+e}{2}$
+    + Example2: $I_2=\oint_{|z|=1}\cfrac{\sin z}{z^{2020}}dz$
+        + $g(z)=\cfrac{\sin z}{z^{2020}}$, $z_0=0$
+        + $I_2=2\pi i\cfrac{(\sin z)^{(2019)}}{2019!}\bigg|_{z=z_0}=2\pi i\cfrac{-\cos 0}{2019!}=-\cfrac{2\pi i}{2019!}$
+    + Example3: $I_3=\oint_{|z|=4}\cfrac{e^z}{z^2(z-1)^2}dz$
+        + $z_0=0$, $z_1=1$
+        + $\oint_{|z|=4}g(z)dz=\oint_{C_1}\cfrac{\frac{e^z}{(z-1)^2}}{z^2}dz+\oint_{C_2}\cfrac{\frac{e^z}{z^2}}{(z-1)^2}=\cfrac{2\pi i }{1!}\cfrac{e^z}{(z-1)^2}\bigg|_{z=0}+\cfrac{2\pi i}{1!}\cfrac{e^z}{z^2}\bigg|_{z=1}=...$
