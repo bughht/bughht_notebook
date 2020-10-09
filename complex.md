@@ -162,7 +162,7 @@
         + $=0$
     + Example2: $I_2=\oint_{|z-i|=1}\cfrac{1}{z^2+i}dz$
         + $g(z)=\cfrac{1}{z^2+i}$, singular point $z_0=\sqrt[n]{|z|}e^{i(\frac{-\pi/2+2k\pi)}{n}}, k \in {0,1}$
-        + $z_0=\cfrac{\cfrac{\sqrt{2}}{2}-\cfrac{\sqrt{2}}{2}i$, $z_1=-\cfrac{\sqrt{2}}{2}+\cfrac{\sqrt{2}}{2}i$
+        + $z_0=\cfrac{\sqrt{2}}{2}-\cfrac{\sqrt{2}}{2}i$, $z_1=-\cfrac{\sqrt{2}}{2}+\cfrac{\sqrt{2}}{2}i$
         + $z_1$ in C
         + $\oint_C\cfrac{1}{z^2+i}dz=\oint_C\cfrac{\cfrac{1}{z-z_0}}{z-z_1}dz=2\pi i \cfrac{1}{z-z_0}\bigg|_{z=z_1}=\cfrac{2\pi i}{-\sqrt{2}+\sqrt{2}i}=\cfrac{\sqrt{2}}{2}\pi(1-i)$
     + Example3: $I_3=\oint_{|z|=2}\cfrac{e^z}{(z^2+1)(2z-1)}$
@@ -189,4 +189,56 @@
         + $\sum_{n=0}^{\infty}C_n(z-z_0)^n$
         + Abel's Theorm
             + if $\sum_{n=1}^{\infty}C_n(z-z_0)$ convergent at $z_1$, it definitely convergent on $K:|z-z_0|<|z_1-z_0|$
-        + 
++ Taylor Series
+    + Taylor Expansion Theorem: If $f(z)$ analytic in $D$, for all $z_0\in D$, if $K:|z-z_0|<R$ in $D$, $f(z)$ could be expand into $f(z)=\sum_{n=0}^{\infty}C_n(z-z_0)^n$, where 
+        + $C_n=\cfrac{1}{2\pi i}\oint_{C_\rho}\cfrac{f(\xi)}{(\xi-z_0)^{n+1}}d\xi=\cfrac{f^{(n)}(z_))}{n!}$: Taylor Coefficient
+        + $z_0$: Expand Center
+        + $C_\rho:|\xi-z_0|=\rho$, $0<\rho<R$
+        + *Trick:* $\cfrac{1}{\xi-z}=\cfrac{1}{(\xi-z_0)-(z-z_0)}=\cfrac{1}{\xi-z_0}\cfrac{1}{1-\cfrac{z-z_0}{\xi-z_0}}=\cfrac{1}{\xi-z_0}\sum_{n=0}^{\infty}t^n=\sum_{n=0}^{\infty}\cfrac{(z-z_0)^n}{(\xi-z_0)^{(n+1)}}$
+        + Example 1: $f(z)=\cfrac{1}{1+z}$, $z_0=0$
+            + Singular Point: $z=-1$, $D:z\not ={-1}$
+            + $K: |z-z_0|=|z|<1$
+            + $\cdots$
+    + Taylor Expansion Method
+        1. Solve Taylor Coefficient Directly: $C_n=\cfrac{f^{(n)}(z_0)}{n!}$
+            + $e^z=\sum_{n=0}^{\infty}\cfrac{z^n}{n!}, |z|<\infty$
+            + $\sin(z)=\sum_{n=0}(-1)^n\cfrac{z^{2n+1}}{(2n+1)!}$
+            + $\cos(z)=\sum_{n=0}(-1)^n\cfrac{z^2n}{(2n)!}$
+        2. Solve with known expansion like $\cfrac{1}{1-z}=\sum_{n=0}^\infty z^n, |z|<1$
+            + $\cfrac{1}{1-z^2}$, $z_0=0$
+                + $R=1$, $|z|<1$
+                + $\cfrac{1}{1-z^2}=\sum_{n=0}^\infty z^2n$
+                + $\cfrac{1}{1+z^2}=\sum_{n=0}^\infty (-1)^n z^{2n}$
+                + $\cfrac{1}{1+z}=\sum_{n=0}^\infty (-1)^n z^n$
+            + $\cfrac{z-1}{z+1}$, $z_0=1$
+                + $R=2, |z-1|<2$
+                + $=1-\cfrac{2}{1+z}=1-\cfrac{1}{2+(z-1)}=1-\cfrac{1}{2}\cfrac{1}{1+\cfrac{z-1}{2}}=1-\cfrac{1}{2}\sum_{n=0}^\infty (-1)^n(\cfrac{z-1}{2})^{2n}$
+            + $\cfrac{z}{z^2+3z+2}$, $z_0=2$
+                + $R=3$, $|z-2|<3$
+                + $=\cfrac{z}{(z+1)(z+2)}=\cfrac{a}{z+1}+\cfrac{b}{z+2}$
+                + $a(z+2)+b(z+1)=z$
+                + $a=-1$, $b=2$
+                + $=-\cfrac{1}{z+1}+\cfrac{2}{z+2}=\cdots$
+                    + $\cfrac{2}{z+2}=\cfrac{2}{(z-2)+4}=\cfrac{1}{2}\cfrac{1}{1+\frac{z-2}{4}}=\cfrac{1}{2}\sum_{n=0}^\infty(-1)^n(\cfrac{z-2}{4})^n$
+            + $f(z)=\cfrac{z}{z^2-2z+5}$, $z_0=1$
+                + singular point: $z^2-2z+5=0$, $1\pm 2$ 
+                + $R=2$
+                + $f(z)=\cfrac{(z-1)+1}{(z-1)^2+4}=((z-1)+1)\cfrac{1}{(z-1)^2+4}$
+                + $=\cfrac{(z-1)+1}{4}\sum_{n=0}^\infty (-1)^n(\cfrac{z-1}{2})^{2n}$
+                + $=\cfrac{z-1}{4}\sum_{n=0}^\infty (-1)^n(\cfrac{z-1}{2})^{2n}+\cfrac{1}{4}\sum_{n=0}^\infty (-1)^n(\cfrac{z-1}{2})^{2n}$
+        3. Derivative within contour $\cfrac{1}{(z-a)^2}=-(\cfrac{1}{z-a})'$
+            + Example: $f(z)=\cfrac{1}{(z+2)^2}$, $z_0=-1$
+                + $R=1$, $|z+1|<1$
+                + $\cfrac{1}{(z+1)^2}=(-\cfrac{f1}{z+2})'$
+                + $-\cfrac{1}{z+2}=-\cfrac{1}{(z+1)+1}=-\sum_{n=0}^\infty (-1)^{n+1}(z+1)^n$
+                + $\Rightarrow \cfrac{1}{(z+2)^2}=\sum_{n=1}^\infty (-1)^{n-1}n(z+1)^{n-1}$
+            + Example2: $f(z)=\cfrac{1}{(z^2+1)^2}$, $z_0=0$
+                + $|z|<1$
+                + $\cfrac{1}{(z^2+1)^2}=(-\cfrac{1}{z^2+1})'\cfrac{1}{2z}$
+                + $(\sum_{n=0}^\infty (-1)^n z^2n)'\cfrac{1}{2z}$
+                + $=\sum_{n=1}^\infty (-1)^{n+1}z^{2n-1}(2n)\cfrac{1}{2z}$
+                + $=\sum_{n=1}^\infty (-1)^{n+1}(2n)z^{2n-2}$
+            + Example3: $f(z)=\cfrac{z^2}{(z+1)^2}$, $z_0=1$
+                + $|z-1|<2$
+                + $f(z)=\cfrac{(z+1)^2-2(z+1)+1}{(z+1)^2}=1-\cfrac{}{z+1}+\cfrac{1}{(z+1)^2}$
+                + $\cdots$
