@@ -71,5 +71,12 @@
         + $p=\cfrac{p_1V_1^{\gamma}}{V^{\gamma}}$
         + $W=\cfrac{p_1V_1}{\gamma-1}\big[1-\big(\cfrac{V_1}{V_2}\big)^{\gamma-1}\big]$
         + $W=\cfrac{1}{\gamma-1}(p_1V_1-p_2V_2)$
-+ All above are bullshit, **Watch this**
-||||
+## All above are bullshit, **Watch this**
+
+| 过程 | 过程方程 | 对外做功$W$ | 吸热$Q$ | 内能增量$\Delta E$ |
+| --- | --- | :---: | :---: | :---: |
+|等容|$\cfrac{p_1}{p_2}=\cfrac{T_1}{T_2}$|0|$vC_{V,m}(T_2-T_1)$|$vC_{V,m}(T_2-T_1)$|
+|等压|$\cfrac{V_1}{V_2}=\cfrac{T_1}{T_2}$|$p(V_2-V_1)$|$vC_{p,m}(T_2-T_1)$|$vC_{V,m}(T_2-T_1)$|
+|等温|$p_1V_1=p_2V_2$|$vRT\ln\cfrac{V_2}{V_1}$|$vRT\ln\cfrac{V_2}{V_1}$|0|
+|绝热a|$pV^{\gamma}=C_1$<br>$TV^{\gamma-1}=C_2$<br>$p^{\gamma-1}T^{-\gamma}=C_3$|$\cfrac{1}{\gamma-1}(p_1V_1-p_2V_2)$|0|$vC_{V,m}(T_2-T_1)$|
+|多方|

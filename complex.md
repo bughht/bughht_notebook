@@ -191,7 +191,7 @@
             + if $\sum_{n=1}^{\infty}C_n(z-z_0)$ convergent at $z_1$, it definitely convergent on $K:|z-z_0|<|z_1-z_0|$
 + Taylor Series
     + Taylor Expansion Theorem: If $f(z)$ analytic in $D$, for all $z_0\in D$, if $K:|z-z_0|<R$ in $D$, $f(z)$ could be expand into $f(z)=\sum_{n=0}^{\infty}C_n(z-z_0)^n$, where 
-        + $C_n=\cfrac{1}{2\pi i}\oint_{C_\rho}\cfrac{f(\xi)}{(\xi-z_0)^{n+1}}d\xi=\cfrac{f^{(n)}(z_))}{n!}$: Taylor Coefficient
+        + $C_n=\cfrac{1}{2\pi i}\oint_{C_\rho}\cfrac{f(\xi)}{(\xi-z_0)^{n+1}}d\xi=\cfrac{f^{(n)}(z_0)}{n!}$: Taylor Coefficient
         + $z_0$: Expand Center
         + $C_\rho:|\xi-z_0|=\rho$, $0<\rho<R$
         + *Trick:* $\cfrac{1}{\xi-z}=\cfrac{1}{(\xi-z_0)-(z-z_0)}=\cfrac{1}{\xi-z_0}\cfrac{1}{1-\cfrac{z-z_0}{\xi-z_0}}=\cfrac{1}{\xi-z_0}\sum_{n=0}^{\infty}t^n=\sum_{n=0}^{\infty}\cfrac{(z-z_0)^n}{(\xi-z_0)^{(n+1)}}$
