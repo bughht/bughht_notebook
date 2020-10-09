@@ -177,3 +177,16 @@
     + Example3: $I_3=\oint_{|z|=4}\cfrac{e^z}{z^2(z-1)^2}dz$
         + $z_0=0$, $z_1=1$
         + $\oint_{|z|=4}g(z)dz=\oint_{C_1}\cfrac{\frac{e^z}{(z-1)^2}}{z^2}dz+\oint_{C_2}\cfrac{\frac{e^z}{z^2}}{(z-1)^2}=\cfrac{2\pi i }{1!}\cfrac{e^z}{(z-1)^2}\bigg|_{z=0}+\cfrac{2\pi i}{1!}\cfrac{e^z}{z^2}\bigg|_{z=1}=...$
++ infinite series
+    + $\sum_{n=1}^{\infty}z_n$
+    + $\sum_{n=1}^{\infty}q^n$ convergence on $|q|<1$
+    + $z_n=x_n+iy_n$ convergent then $\sum_{n=1}^\infty x_n$ and $\sum_{n=1}^\infty y_n$ convergent.
+    + Example $\sum_{n=1}^{\infty}\cfrac{i^n}{n}$   
+        + $=i-\cfrac{1}{2}-\cfrac{1}{3}i+\cfrac{1}{4}+\cfrac{1}{5}i$
+        + $=(-\cfrac{1}{2}+1/3-1/6+\cdots)+i(1-1/3+1/5-\cdots)$
+    + $\sum_{n=1}^{\infty}|z_n|$ convergent, then $\sum_{n=1}^{\infty}z_n$ convergent.
+    + power series
+        + $\sum_{n=0}^{\infty}C_n(z-z_0)^n$
+        + Abel's Theorm
+            + if $\sum_{n=1}^{\infty}C_n(z-z_0)$ convergent at $z_1$, it definitely convergent on $K:|z-z_0|<|z_1-z_0|$
+        + 
