@@ -242,3 +242,35 @@
                 + $|z-1|<2$
                 + $f(z)=\cfrac{(z+1)^2-2(z+1)+1}{(z+1)^2}=1-\cfrac{}{z+1}+\cfrac{1}{(z+1)^2}$
                 + $\cdots$
++ Laurent Series
+    + Laurent Expansion
+        + Definition: $C_0+C_1(z-z_0)+C_2(z-z_0)^2+\cdots$(1) and $\cfrac{C_{-1}}{z-z_0}+\cfrac{C_{-2}}{(z-z_0)^2}+\cdots$(2), (1)+(2) called Laurent Series.
+            + **Expression:** $\sum\limits_{n=-\infty}^\infty C_n(z-z_0)^n$
+        + Convergence Region: 
+            + Let $\xi=\cfrac{1}{z-z_0}$, then $(2)=c_{-1}\xi+c_-2\xi^2+\cdots$
+            + $|\xi|<\cfrac{1}{r}(0\leq r\le \infty)$ convergent
+            + $\Rightarrow$ (2) convergent in $|z-z_0| \ge r(0 \leq r\le \infty$
+            + When $r<R$, $r \le |z-z_0| \le R$
+                + Especially when $r=0$, $0<|z-z_0|<R$
+    + $f(z)=\sum\limits_{n=-\infty}^{+\infty}C_n(z-z_0)^n$ could be derivative by steps within $H$
+    + $f(z)$ could be integrate along $C$ within $H$
+    + Laurent Expansion Theorem
+        + $C_n\cfrac{1}{2\pi i}\oint_C\cfrac{f(\xi)}{(\xi-z_0)^{n+1}}d\xi$
+            + $C_n\not ={\cfrac{f^{(n)}(z_0)}{n!}}$
+        + Example1: $f(z)=\cfrac{z}{z^2+z-2}$, $z_0=-2$
+            + singular point: $z=-2,1$
+            + $\rho_0=0$,$\rho_1=3$
+            + $0< |z+2|< 3$
+            + $\cdots$
+            
+    + Laurent Expansion Method
+        + Expand through exsisted Taylor Expansion $\cfrac{1}{1-z}=\sum\limits_{n=0}^\infty z^n,|z|<1$
+            + $z_0$ is an analyic point on $f(z)$
+            + Example $f(z)=\cfrac{z}{z^2+z-2}$, $z_0=-1$
+                + $f(z)=\sum_{n=-\infty}^\infty C_n(z+1)^n$
+                + $f(z)=\cfrac{z}{(z+2)(z-1)}=\cfrac{a}{z+2}+\cfrac{b}{z-1}=\cfrac{1}{3}(\cfrac{2}{z+2}+\cfrac{1}{z-1})$
+                    + (1) $\cfrac{2}{z+2}=\cfrac{2}{(z+1)+1}=\sum_{n=0}^\infty(-1)^n(z+1)^n$
+                    + (1) $\cfrac{1}{z-1}=\cfrac{1}{(z+1)-2}=\cfrac{1}{2}\sum_{n=0}^\infty(\cfrac{z+1}{2})^n$
+                    + (2) $\cfrac{2}{z+2}=\cfrac{2}{(z+1)+1}=\cfrac{2}{z+1}\sum_{n=0}^\infty(-1)^n(\cfrac{1}{z+1})^n$
+                    + (2) $\cfrac{1}{z-1}=\cfrac{1}{(z+1)-2}=\cfrac{1}{2}\sum_{n=0}^\infty(\cfrac{z+1}{2})^n$
+                
