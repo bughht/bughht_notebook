@@ -203,7 +203,7 @@
         1. Solve Taylor Coefficient Directly: $C_n=\cfrac{f^{(n)}(z_0)}{n!}$
             + $e^z=\sum_{n=0}^{\infty}\cfrac{z^n}{n!}, |z|<\infty$
             + $\sin(z)=\sum_{n=0}(-1)^n\cfrac{z^{2n+1}}{(2n+1)!}$
-            + $\cos(z)=\sum_{n=0}(-1)^n\cfrac{z^2n}{(2n)!}$
+            + $\cos(z)=\sum_{n=0}(-1)^n\cfrac{z^{2n}}{(2n)!}$
         2. Solve with known expansion like $\cfrac{1}{1-z}=\sum_{n=0}^\infty z^n, |z|<1$
             + $\cfrac{1}{1-z^2}$, $z_0=0$
                 + $R=1$, $|z|<1$
@@ -273,4 +273,45 @@
                     + (1) $\cfrac{1}{z-1}=\cfrac{1}{(z+1)-2}=\cfrac{1}{2}\sum_{n=0}^\infty(\cfrac{z+1}{2})^n$
                     + (2) $\cfrac{2}{z+2}=\cfrac{2}{(z+1)+1}=\cfrac{2}{z+1}\sum_{n=0}^\infty(-1)^n(\cfrac{1}{z+1})^n$
                     + (2) $\cfrac{1}{z-1}=\cfrac{1}{(z+1)-2}=\cfrac{1}{2}\sum_{n=0}^\infty(\cfrac{z+1}{2})^n$
-                
+            + Example: $f(z)=\sin \cfrac{1}{z}$, $z_0=0$
+                + $0<|z|<+\infty$, $f(z)=\sum C_n z^n$
+                + $\sin \frac{1}{z}=\sin t(t=1/z)=\sum_{n=0}^\infty (-1)^n\cfrac{z^{2n+1}}{(2n+1)!}$, $0<|t|<\infty$
+                + $\cdots$
+        + Integrate/Derivate by steps within domain region
+            + Example $f(z)=\cfrac{1}{(z+2)^2}$
+                + $f(z)=-(\cfrac{1}{z+2})'$, $z_0=-1$
+                + $\cfrac{1}{z+2}=\cfrac{1}{1+(z+1)}=\cfrac{1}{z+1}\cfrac{1}{1+\frac{1}{z+1}}=\cfrac{1}{z+1}\sum_{n=0}^\infty(-1)^n(\cfrac{1}{z+1})^n=\sum_{n=0}^\infty(-1)^{n++1}(\cfrac{1}{z+1})^{n+1}$
+                + $(-\cfrac{1}{z+2})'=\sum (-1)^{n+1}(\cfrac{1}{z+1})^n(-\cfrac{1}{(z+1)^2})$
+        + Integrate
+            + $\oint_Cf(z)dz=\oint_{C_1}f(z)dz+\oint_{C_2}f(z)dz$
+            + $\oint_{C_1}f(z)dz ==\oint_{C}\sum_C_n(z-z_0)^n$
+                + $f(z)=\sum_{n=0}^\inftyC_n(z-z_0)^n+\sum_{n=-\infty}^{-1}c_n(z-z_0)^n$
+                    + **Analytic Part** + **Main Part**
+            + $=\sum_{n=-\infty}^\infty \oint_{C_1}C_n(z-z_1)^ndz$
+            + $=\sum_{n=0}^\infty\oint_{C_1}C_n(z-z_0)^n+\sum_{n=-\infty}^{-1}\oint_{C_1}C_n(z-z_0)^ndz$
+            + $=\sum_{n=-\infty}^{-1}\oint_{C_1}C_n(z-z_0)^ndz$
+            + $=\sum_{n=1}^\infty C_{-n}\oint_{C_1}\cfrac{1}{(z-z_0)^n}$
+            + $=C_{-1}2\pi i$
++ Residue: $\text{Res}[f(z),z_0]=C_{-1}$
+    + Residue Theroem: $\oint_Cf(z)dz=2\pi i\sum_{k=1}^n\text{Res}[f(z),z_k]$
+    + Isolated Singularity
+        + Classification of Isolated Singularity    
+            + Removable Singularity 
+                + Main part of $f(z)$ equals to 0, $f(z)=C_0+C_1(z-z_0)+\cdots$, $0<|z-z_0|<R$
+                + Append definition $f(z_0)=\lim\limits_{z\to z_0}f(z)=C_0$ then $f(z)$ analytic on $z_0$.
+                + Example 1:  Prove that $z=0$ is the removable singularity of $f(z)=\cfrac{\sin z}{z}$
+                    + Singularity: $z_0=0$, $0<|z|<+\infty$
+                    + $f(z)=\cfrac{1}{z}\sum_{n=0}^\infty(-1)^n\cfrac{z^{2n+1}}{(2n+1)!}$
+                    + $\cdots$
+                + Th: $z_0$ is the removable singularity of $f(z)$ $\Leftrightarrow$ $\lim\limits_{z\to z_0}f(z)=C_0 (\not ={\infty})$
+                + **L'Hospital Rule**: $\lim\limtis_{z\to z_0}\cfrac{f(z)}{g(z)}=\lim\limtis_{z\to z_0}\cfrac{f'(z)}{g'(z)}$
+                + $f(z)=\cfrac{\sin z}{z}$, $z_0=0$
+                + $f(z)=\cfrac{e^z-1}{z}$, $z_0=0$
+                + $f(z)=\cfrac{1}{e^z-1}-\cfrac{1}{z}$, $z_0=0$ is removable singularity
+            + Pole Singularity 
+                + $f(z)=\cfrac{C_{-m}}{(z-z_0)^m}+\cdots+ \cfrac{C_{-1}}{z-z_0}+C_0+C_1(z-z_0)+\cdots$ and $C_m\not ={0}$, then $z_0$ is the m-order pole singularity of $f(z)$ 
+                + Example: prove that $z=0$ is the 2018-order polar singularity of $f(z)=\cfrac{e^z-1}{z^{2019}}$
+                    + $z_0=0$
+                    + $f(z)=\cfrac{1}{z^{2019}}(-1+ 1+\cfrac{z^2}{2!}+\cfrac{z^3}{3!}+\cdots$
+                    + $\cdots$
+            + Essential Singularity 
