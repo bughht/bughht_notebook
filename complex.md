@@ -304,7 +304,7 @@
                     + $f(z)=\cfrac{1}{z}\sum_{n=0}^\infty(-1)^n\cfrac{z^{2n+1}}{(2n+1)!}$
                     + $\cdots$
                 + Th: $z_0$ is the removable singularity of $f(z)$ $\Leftrightarrow$ $\lim\limits_{z\to z_0}f(z)=C_0 (\not ={\infty})$
-                + **L'Hospital Rule**: $\lim\limtis_{z\to z_0}\cfrac{f(z)}{g(z)}=\lim\limtis_{z\to z_0}\cfrac{f'(z)}{g'(z)}$
+                + **L'Hospital Rule**: $\lim\limits_{z\to z_0}\cfrac{f(z)}{g(z)}=\lim\limts_{z\to z_0}\cfrac{f'(z)}{g'(z)}$
                 + $f(z)=\cfrac{\sin z}{z}$, $z_0=0$
                 + $f(z)=\cfrac{e^z-1}{z}$, $z_0=0$
                 + $f(z)=\cfrac{1}{e^z-1}-\cfrac{1}{z}$, $z_0=0$ is removable singularity
@@ -314,4 +314,48 @@
                     + $z_0=0$
                     + $f(z)=\cfrac{1}{z^{2019}}(-1+ 1+\cfrac{z^2}{2!}+\cfrac{z^3}{3!}+\cdots$
                     + $\cdots$
+                + methods 
+                    + $z=z_0\Leftrightarrow \lim_{z\to z_0}f(z)=\infty$, $\cfrac{1}{0}=\infty, \cfrac{1}{\infty}=0, a\cdot \infty=\infty$
+                        + Example: $f(z)=\cfrac{e^z-1}{z^{2019}}$
+                            + $\lim\limits_{z\to 0}\cfrac{e^z-1}{z^2019}=\lim\limits\cfrac{e^z}{2019z^{2018}}=\infty$
+                    + $z_0$ is the pole singularity of $f(z)\Leftrightarrow f(z)$ can be expressed as $f(z)=\cfrac{\phi(z)}{(z-z_0)^m}$ and $\phi(z)$ analytic in $z_0$ and $\phi(z_0)\not ={0}$
+                        + Requirements
+                            + Polynomial denominator 
+                            + **Important:** $\frac{1}{0}$
+                        + Example: $f(z)=\cfrac{1}{z^2(z-1)}$, $z_0=0$
+                            + $f(z)=\cfrac{\frac{1}{z-1}}{z^2}$
+                            + 2-order
+                    + $z_0$ is m-order pole singularity of $f(z)\Leftrightarrow z_0$ is m-order 0-point of $g(z)=\cfrac{1}{f(z)}$
+                        + Example: $f(z)=\cfrac{1}{e^z-1}$, $z_0=2k\pi i$
+                            + $g(z)=e^z-1$
+                            + $g^{(1)}(z)=e^z$
+                            + $g^{(1)}(2k\pi i)=0$
+                            + 1-order
+                        + Example 2: $f(z)=\cfrac{z-1}{z(e^z-1)}$
+                            + $z_0=0$ or $2k\pi i$
+                            + $z_0=0$
+                                + $g(z)=\cfrac{z(e^z-1)}{z-1}=\cfrac{1}{z-1}h(z)$
+                                + $h(z)=z(e^z-1)$
+                                + $g'(z)=(\cfrac{1}{z-1})'h(z)+(\cfrac{1}{z-1})h'(z)$
+                                + $g'(0)=(\cfrac{1}{0-1})h'(0)=0$
+                                + $g''(0)=(\cfrac{1}{z-1})''h(z)+(\cfrac{1}{z-1})'h'(z)+\cfrac{1}{z-1}h''(z)\Leftrightarrow g''(0)=0\Leftrightarrow h''(0)=0$
+                        + $\sin z=\cfrac{e^{iz}-e^{-iz}}{2i}$
+                + $f(z)=g(z)h(z)$ where $g(z)$ is removable singularity and $f(z)$ is m-order pole singuarity, then $f(z)$ is m-order pole singularity
+                    + $f(z)=\cfrac{\sin z}{z(e^z-1)}=\cfrac{\sin z}{z}\cdot \cfrac{1}{e^z-1}$
             + Essential Singularity 
+                + $f(z)=\cdots + \cfrac{C_{-m}}{(z-z_0)^m}+ \cdots$
+                + $z=0$, $f(z)=e^{\frac{1}{z}$, $\sin\cfrac{1}{z}$, $\cos \cfrac{1}{z}$
+    + Residue of removable singularity: $Res[f(z),z_0]=C_{-1}=0$
+        + $Res[\cfrac{z}{e^z-1}]=0$, $\oint_{|z|=10}\cfrac{z}{e^z-1}dz=2\pi i*$
+    + Residue of essential singularity: solve with Laurent Expansion
+        + Example: $f(z)=\cos\cfrac{1}{z}$
+            + $f(z)=1-\cfrac{1}{2!}(1\2)^2$
+            + 0
+        + Example: $f(z)=\cfrac{z^3}{1+z}e^{\cfrac{1}{z}}$
+            + $z=0$
+                + $f(z)=(z^3(1-z+z^2-z^3\cdots))(1+\cfrac{1}{z}+\cfrac{1}{2!z}+\cdots)$
+                + $=(\cfrac{1}{4!}-\cfrac{1}{5!}+\cfrac{1}{6!}-\cdots)\cfrac{1}{z}+ \cdots$
+                + $=(e^{-z}-\cfrac{1}{2!}+\cfrac{1}{3!})(1/z)+\cdots$
+
+
+    
