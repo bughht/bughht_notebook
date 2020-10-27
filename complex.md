@@ -1,4 +1,4 @@
-+ $ f'(z_0)=\lim_{\Delta z\to 0}\cfrac{\Delta w}{\Delta z}$
++ $f'(z_0)=\lim_{\Delta z\to 0}\cfrac{\Delta w}{\Delta z}$
 + $\cfrac{\Delta w}{\Delta z}=f'(z_0)+\eta(\Delta z)\Delta z$
 + $Prove  f(z)=z^2 \text{is derivatable and } (z^2)'=2z$
     $\cfrac{\Delta w}{\Delta z}=\cfrac{(z+\Delta z)^2-z^2}{\Delta z}=\cfrac{2z\Delta z+\Delta z^2}{\Delta z}$
@@ -285,7 +285,7 @@
         + Integrate
             + $\oint_Cf(z)dz=\oint_{C_1}f(z)dz+\oint_{C_2}f(z)dz$
             + $\oint_{C_1}f(z)dz ==\oint_{C}\sum_C_n(z-z_0)^n$
-                + $f(z)=\sum_{n=0}^\inftyC_n(z-z_0)^n+\sum_{n=-\infty}^{-1}c_n(z-z_0)^n$
+                + $f(z)=\sum_{n=0}^\infty C_n(z-z_0)^n+\sum_{n=-\infty}^{-1}c_n(z-z_0)^n$
                     + **Analytic Part** + **Main Part**
             + $=\sum_{n=-\infty}^\infty \oint_{C_1}C_n(z-z_1)^ndz$
             + $=\sum_{n=0}^\infty\oint_{C_1}C_n(z-z_0)^n+\sum_{n=-\infty}^{-1}\oint_{C_1}C_n(z-z_0)^ndz$
@@ -304,7 +304,7 @@
                     + $f(z)=\cfrac{1}{z}\sum_{n=0}^\infty(-1)^n\cfrac{z^{2n+1}}{(2n+1)!}$
                     + $\cdots$
                 + Th: $z_0$ is the removable singularity of $f(z)$ $\Leftrightarrow$ $\lim\limits_{z\to z_0}f(z)=C_0 (\not ={\infty})$
-                + **L'Hospital Rule**: $\lim\limits_{z\to z_0}\cfrac{f(z)}{g(z)}=\lim\limts_{z\to z_0}\cfrac{f'(z)}{g'(z)}$
+                + **L'Hospital Rule**: $\lim\limits_{z\to z_0}\cfrac{f(z)}{g(z)}=\lim\limits_{z\to z_0}\cfrac{f'(z)}{g'(z)}$
                 + $f(z)=\cfrac{\sin z}{z}$, $z_0=0$
                 + $f(z)=\cfrac{e^z-1}{z}$, $z_0=0$
                 + $f(z)=\cfrac{1}{e^z-1}-\cfrac{1}{z}$, $z_0=0$ is removable singularity
@@ -356,6 +356,71 @@
                 + $f(z)=(z^3(1-z+z^2-z^3\cdots))(1+\cfrac{1}{z}+\cfrac{1}{2!z}+\cdots)$
                 + $=(\cfrac{1}{4!}-\cfrac{1}{5!}+\cfrac{1}{6!}-\cdots)\cfrac{1}{z}+ \cdots$
                 + $=(e^{-z}-\cfrac{1}{2!}+\cfrac{1}{3!})(1/z)+\cdots$
+    + Residue of m-order pole singularity
+        + solve with Laurent Expansion: $C_{-1}$
+            + Example: $Res[\cfrac{e^z-1}{z^{2019}},0]$
+                + $=\cfrac{1}{z^{2019}}(z+\cfrac{1}{2!}z^2+\cdots+\cfrac{1}{n!}z^n+\cdots)$
+                + $C_{-1}=\cfrac{1}{2018!}$
+            + $I=\oint_{|z|=1}\cfrac{e^z-1}{z^{2019}}dz=2\pi i*\cfrac{1}{2018!}$
+        + if $z_0$ is m-order pole singularity of $f(z)$, $Res[f(z),z_0]=\cfrac{1}{(m-1)!}\lim\limits_{z\to z_0}\cfrac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]$
+            + Especially when $m=1$, $Res[f(z),z_0]=\lim\limits_{z\to z_0}[(z-z_0)f(z)]$
+            + Example1 $Res[\cfrac{e^z}{(z-1)^2(2z+1)}]$
+                + $z_0=1$: 2-order pole singularity
+                    + $Res[\cfrac{e^z}{(z-1)^2(2z+1)},1]=\cfrac{1}{1!}(\cfrac{e^z}{2z+1})'=\cfrac{e}{9}$
+                + $z_0=-\cfrac{1}{2}$: 1-order 
+                    + $Res[\cfrac{e^z}{(z-1)^2(2z+1)},-\cfrac{1}{2}]=\lim\limits_{z\to-1/2}\cfrac{e^z}{(z-1)^2}$
+            + Example $Res[\cfrac{z-1}{z(e^z-1)},0]$
+                + 2-order
+                + $=\lim_{z\to 0}{\cfrac{(z-1)z}{e^z-1}'$
+                + $=\lim_{z\to 0}{\cfrac{(2z-1)(e^z-1)-z(z-1)e^z}{(e^z-1)^2}}$
+                + $=\cfrac{3}{2}$
+            + Example $Res[\tan\pi z,k+\cfrac{1}{2}], I_3=\oint_{|z|=2}\tan \pi zdz$
+                + $z_k=k+\cfrac{1}{2}$: 1-order;
+                + $=\lim_{z\to z_k}(z-z_k)\cfrac{\sin \pi z}{\cos\pi z}$
+                + $\cdots$
+            + Example $f(z)=\cfrac{1}{x^4+1}$
+                + $z_k=e^{\cfrac{(2k+1)\pi i}{4}}$
+                + 1-order
+                + $Res[f(z),z_k]=\lim_{z\to z_k}f(z)(z-z_k)=\cfrac{1}{4z_k^3}=\cfrac{z_k}{4\cdot (-1)}$
+        + Process
+            1. find all singularity
+            2. check type
+            3. get residue based on singularity type
+            4. use residue theroem
+    + Application of Residue theorem
+        + $\int_0^{2\pi} R(\cos\theta,\sin\theta)d\theta$
+            + $\int_0^{2\pi} R(\cos\theta,\sin\theta)d\theta=\oint_Cf(z)dz$
+            + let $z=e^{i\theta}$
+            + $\int_0^{2\pi}R(\cos\theta,\sin\theta)d\theta=\oint_{|z|=1}f(z)dz$
+                + $d\theta=\cfrac{1}{iz}}dz$
+                + $\cos\theta=\cfrac{e^{i\theta}+e^{-i\theta}}{2}=\cfrac{z^2+1}{2z}$
+                + $\sin\theta=\cfrac{e^{i\theta-e^{-i\theta}}}{2i}=\cfrac{z^2-1}{2iz}$
+            + $I=\oint_{|z|=1}R(\cfrac{z^2+1}{2z},\cfrac{z^2-1}{2iz})\cfrac{1}{2z}dz$
+            + Example: $I=\int_0^{2\pi}\cfrac{d\theta}{5-3\cos\theta}$
+                + $z=e^{i\theta}$
+                + $\cos\theta=\cfrac{z^2+1}{2z}$
+                + $d\theta=\cfrac{1}{iz}dz$
+                + $I=\oint_{|z|=1}\cfrac{1}{5-3(\cfrac{z^2+1}{2z})}\cfrac{1}{iz}dz$
+                + $=-\cfrac{2}{i}\oint_{|z|=1}\cfrac{dz}{(3z-1)(z-3)}=-\cfrac{1}{8}$
+        + $\int_{-\infty}^\infty\cfrac{P(x)}{Q(x)}dx=\lim\limits_{R\to\infty}\int_{-R}^R\cfrac{P(x)}{Q(x)}dx$
+            + where $P(x)=C_0x^m+C_1x^{m-1}+\cdots+C_m$ and $Q(x)=b_0x^n+b_1x^{n-1}+\cdots+b_n$
+                + $\partial Q(x)-\partial P(x)\ge 2$
+                + $Q(x)\ne 0$
+            + then $\int_{-\infty}^\infty\cfrac{P(x)}{Q(x)}dx=2\pi i\sum_{i=1}^n Res[f(z),z_k]$, where $f(z)=\cfrac{P(z)}{Q(z)}$ and $z_k$ is the singularity on above part of $f(z)$
+            + Example: $I=\int_{-\infty}^\infty\cfrac{1}{1+x^4}dx$
+                + $f(z)=\cfrac{1}{1+z^4}$     
+                + $z_k=e^{\cfrac{\pi+2k\pi}{4}}$, $k=0,1$
+                + $I=2\pi i(Res(f(z),0)+Res(f(z),1))$
+            + Example2: $I_2=\int_0^\infty\cfrac{1}{1+x^4}dx$
+                + $=\cfrac{\int_{-\infty}^\infty\cfrac{1}{1+x^4}dx}{2}$
+        + $\int_{-\infty}^\infty\cfrac{P(x)}{Q(x)}e^{iax}dx$ $(a>0)$
+            + $\partial Q(x)>\parital P(x)$
+            + $Q(x)\ne 0$
+            + $\int_{-\infty}^\infty\cfrac{P(x)}{Q(x)}e^{iax}dx=2\pi i\sum_{i=1}^n Res[\cfrac{P(x)}{Q(z)}e^{iaz},z_k]$
+                + $z_K$ is the singularity on $\cfrac{P(z)}{Q(z)}e^{iaz}$ on above part of $f(z)$
+            + $A=2\pi i\sum_{i=1}^nRes[\cfrac{P(z)}{Q(z)}e^{iaz},z_k]$
+            + $\int_{-\infty}^\infty \cfrac{P(x)}{Q(x)}\cos axdx=\Re A$
+            + $\int_{-\infty}^\infty \cfrac{P(x)}{Q(x)}\sin axdx=\Im A$
 
 
-    
+
