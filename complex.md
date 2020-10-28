@@ -414,13 +414,37 @@
             + Example2: $I_2=\int_0^\infty\cfrac{1}{1+x^4}dx$
                 + $=\cfrac{\int_{-\infty}^\infty\cfrac{1}{1+x^4}dx}{2}$
         + $\int_{-\infty}^\infty\cfrac{P(x)}{Q(x)}e^{iax}dx$ $(a>0)$
-            + $\partial Q(x)>\parital P(x)$
+            + $\partial Q(x)>\partial P(x)$
             + $Q(x)\ne 0$
             + $\int_{-\infty}^\infty\cfrac{P(x)}{Q(x)}e^{iax}dx=2\pi i\sum_{i=1}^n Res[\cfrac{P(x)}{Q(z)}e^{iaz},z_k]$
                 + $z_K$ is the singularity on $\cfrac{P(z)}{Q(z)}e^{iaz}$ on above part of $f(z)$
             + $A=2\pi i\sum_{i=1}^nRes[\cfrac{P(z)}{Q(z)}e^{iaz},z_k]$
             + $\int_{-\infty}^\infty \cfrac{P(x)}{Q(x)}\cos axdx=\Re A$
             + $\int_{-\infty}^\infty \cfrac{P(x)}{Q(x)}\sin axdx=\Im A$
-
-
-
++ Fourier Transform
+    + Dirichlet Requiremnt:
+        + Continuous or has limited one-order discontinuity.
+        + ?
+    + $f_T(t)=\cfrac{a_0}{2}\sum_{n=1}\infty a_n \cos n\omega_0 t+b_n\sin n \omega_0 t$
+        + $a_n=\cfrac{2}{T}\int_{-T/2}^{T/2}f_T(t)\cos n\omega_0 tdt$
+        + $b_n=\cfrac{2}{T}\int_{-T/2}^{T/2}f_T(t)\sin n\omega_0 tdt$
+        + $\omega_0:$  Baseband
+    + using Euler Equation
+        + $f_T(t)=\sum_{n=-\infty}^{\infty}c_ne^{in\omega_0 t}$
+        + $c_0=\cfrac{a_0}{2}$
+        + $c_n=\cfrac{1}{T}\int_{-T/2}^{T/2}f_T(t)e^{-in\omega_0 t}dt$
+        + $f_T(t)=\sum_{n=-\infty}^\infty(\cfrac{1}{T}\int_{-T/2}^{T/2}f_T(t)e^{-in\omega_0 t}dt)e^{in\omega_0 t}$
+        + $c_n=\cfrac{1}{T}\int_{-T/2}^{T/2}f_T(t)e^{-i\omega_nt}dt$
+        + $f(t)=\lim\limits_{T\to\infty}f_T(t)=\lim\limits_{T\to\infty}\cfrac{1}{T}\sum_{n=-\infty}^\infty(\int_{-T/2}^{T/2}f_T(t)e^{-in\omega_0 t}dt)e^{i\omega_n t}$
+        + $\Delta\omega=\omega_n-\omega_{n-1}=2\pi/T$
+        + $\Delta\omega\to 0\Leftrightarrow T\to +\infty$
+        + $f(t)=\lim\limits_{\Delta \omega\to 0}\cfrac{1}{2\pi}\sum_{n=-\infty}^\infty F_T(\omega_n)e^{i\omega_n t}\Delta\omega$
+        + $f(t)=\cfrac{1}{2\pi}\int_{-\infty}^\infty[\int_{-\infty}^\infty f(t)e^{-i\omega t}dt]e^{i\omega t}d\omega$
+        + $F(\omega)$: Fourier Transform of $f(t)$: $F_T(\omega)=\int_{-\infty}^{\infty}f(t)e^{-i\omega t}dt$, $T\to +\infty$
+        + Fourier Integration of $f(t)$: $f(t)=\cfrac{1}{2\pi}\int_{-\infty}^{+\infty}F(\omega)e^{i\omega t}d\omega$
+    + Fourier Integration Exisit theorem
+    + LIST:
+        + $\int_{-\infty}^{\infty}|f(t)|dt<+\infty$
+        + $f(t)$ support Dirichlet requirement within bounded region
+        + Fourier Transform of $f(t)$: $F(\omega)=\mathscr{F}[f(t)]=\int_{-\infty}^{+\infty}f(t)e^{-i\omega t}dt$
+        + Inverse Fourier Transform of $F(\omega)$: $\mathscr{F}^{-1}[F(\omega)]=\cfrac{1}{2\pi}\int_{-\infty}^{+\infty}F(\omega)e^{i\omega t}d\omega$
