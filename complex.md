@@ -448,3 +448,65 @@
         + $f(t)$ support Dirichlet requirement within bounded region
         + Fourier Transform of $f(t)$: $F(\omega)=\mathscr{F}[f(t)]=\int_{-\infty}^{+\infty}f(t)e^{-i\omega t}dt$
         + Inverse Fourier Transform of $F(\omega)$: $\mathscr{F}^{-1}[F(\omega)]=\cfrac{1}{2\pi}\int_{-\infty}^{+\infty}F(\omega)e^{i\omega t}d\omega$
+    + $\delta$ Function (Dirac Function)
+        + $$\rho(x)=\lim\limits_{L\to 0}\rho_L(x)=\begin{cases}
+            0 & x\ne x_0\\
+            \infty & x=x_0\\ \end{cases}$$
+        + $\int_{-\infty}^{\infty}\delta(t)dt=1$
+        + $\int_{-\infty}^{\infty}\delta(t-t_0)f(t)dt=f(t_0)$
+
+    + Fourier Transformation of $\delta$ function
+        + $\mathscr{F}[\delta(t)]=\int_{-\infty}^\infty\delta(t)e^{-i\omega t}dt=e^{-i\omega t}\big|_{t=0}=1$
+        + $\delta(t)=\cfrac{1}{2\pi}\int_{-\infty}^\infty 1e^{i\omega t}d\omega\Rightarrow \int_{-\infty}^\infty e^{i\omega t}d\omega=2\pi \delta(t)\Rightarrow \int_{-\infty}^\infty e^{i\omega t}dt=2\pi \delta(\omega)$
+        + Example $\mathscr{F}[1]$
+            + $\int_{-\infty}^\infty e^{-i\omega t}dt=\int_{-\infty}^\infty e^{it(-\omega)}dt=2\pi \delta(-\omega)=2\pi\delta(\omega)$
+        + Example $f(t)=e^{i\omega_0 t}$
+            + $\mathscr{F}[e^{i\omega_0 t}]=\int_{-\infty}^\infty e^{it(\omega_0-\omega)}dt=2\pi\delta(\omega-\omega_0)$
+        + Example $f(t)=\cos\omega_0 t$
+            + $\mathscr{F}[f(t)]=\int_{-\infty}^\infty \cos\omega_0 te^{-i\omega t}=\int_{-\infty}^{\infty}=\cfrac{e^{i\omega_0t}-e^{-i\omega_0t}}{2}e^{-i\omega t}=\pi[\delta(\omega-\omega_0)+\delta(\omega+\omega_0)]$
+    + Characteristics
+        + Linear
+            + $\mathscr{F}[\alpha f+\beta g]=\alpha\mathscr{F}[f]+\beta\mathscr{F}[g]$
+        + Translate
+            + $\mathscr{F}[f(t-t_0)]=e^{-i\omega t_0}\mathscr{F}[f]$
+            + $\mathscr{F}[e^{i\omega_0t}f(t)]=F(\omega-\omega_0)$
+            + Example $\mathscr{F}[\delta(t-2)]$
+                + $=e^{-i\omega 2}$
+            + Example $\mathscr{F}[\cos\omega_0(t-1)]=e^{i\omega}\pi(\delta(\omega-\omega_0)+)$
+            + Example $\mathscr{F}[f(t)\cos\omega_0t]=\mathscr{F}[f(t)\cfrac{e^{i\omega_0t}+e^{-i\omega_0t}}{2}]=\cfrac{1}{2}F(\omega-\omega_0)+\cfrac{1}{2}F(\omega+\omega_))$
+        + Similarity
+            + assume that $a\not ={0}, $\mathscr{F}[f(at)]=\cfrac{1}{|a|}F(\cfrac{\omega}{a})$
+        + differential
+            + If $\lim\limits_{|t|\to\infty}f(t)=0$,then
+            + $\mathscr{F}[f'(t)]=i\omega\mathscr{F}[f]$
+            + $\cfrac{dF(\omega)}{d\omega}=\mathscr{F}[-itf(t)]$
+            + Generally
+                + $\mathscr{F}[f^{(n)}(t)]=(i\omega)^n\mathscr{F}[f]$
+                + $\cfrac{d^nF(\omega)}{d\omega^n}=(-i)^n\mathscr{F}[t^nf(t)]$
+            + Example $\mathscr{F}[(2t-1)f(t)]$
+                + $=2\mathscr{F}[tf]-F(\omega)=$
+        + integral
+            + $\mathscr{F}[g(t)]=\cfrac{1}{i\omega}\mathscr{F}[f(t)]$
+        + Convolution
+            + $\mathscr{f_1*f_2}=\mathscr{f_1(t)}+\mathscr{f_2(t)}$
+            + TODO
++ Preparation For Laplace Transform
+    + $\cfrac{Q(s)}{R(s)}$
+        + $==\cfrac{c_1}{s-a}+\cfrac{c_2}{(s-a)^2}+\cdots+\cfrac{c_k}{(s-a)^k}$
+        + $==\cfrac{M_1s+N_1}{(s-\alpha)^2+\beta^2}+\cfrac{M_2s+N_2}{[(s-\alpha)]^2-\beta^2}$
+        + $\cdots$
+    + Example $\cfrac{5s-1}{(s+1)(s-2)}$
+        + $=\cfrac{a}{s+1}+\cfrac{b}{s-2}$
+        + $a=2$
+        + $b=3$
+        + $=\cfrac{2}{s+1}+\cfrac{3}{s-2}$
+    + Example $\cfrac{s+3}{(s+1)(s+2)^2}$
+        + $=\cfrac{a}{s+1}+\cfrac{b}{s+2}+\cfrac{c}{(s+2)^2}$
+        + $\cdots$
+    + Example $\cfrac{1}{[(s+1)^2+1](s+2)}$
+        + $=\cfrac{a}{s+2}+\cfrac{bs+c}{(s+1)^2+1}+\cfrac{ds+e}{[(s+1)^2+1]^2}$
+    + Example $\cfrac{s^2}{(s^2+1)^2}$
+        + $=\cfrac{as+b}{(s^2+1)}+\cfrac{cs+d}{(s^2+1)^2}$
+
+
+
