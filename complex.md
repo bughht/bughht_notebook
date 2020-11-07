@@ -507,6 +507,54 @@
         + $=\cfrac{a}{s+2}+\cfrac{bs+c}{(s+1)^2+1}+\cfrac{ds+e}{[(s+1)^2+1]^2}$
     + Example $\cfrac{s^2}{(s^2+1)^2}$
         + $=\cfrac{as+b}{(s^2+1)}+\cfrac{cs+d}{(s^2+1)^2}$
-
-
-
++ Laplace Transformation
+    + Definition of Laplace Transformation
+        + assume that $f(t)$ is a real function defined on $[0,\infty)$ and support Dirichlet Requirements, for $s=\beta+i\omega$, the Laplace Transformation of $f(t)$ is $F(s)=\int_0^{+\infty}f(t)e^{-st}dt$ which convergent.
+        + $$f_1(t)=\begin{cases}
+            f(t)e^{-st}&t>=0\\
+            0&t<0\\        \end{cases}$$
+        + $\mathscr{F}[f_1(t)]=\int_{-\infty}^{+\infty}f_1(t)e^{-i\omega t}dt=\int_0^{+\infty}f(t)e^{-\beta t}e^{-i\omega t}dt=\int_0^{+\infty}f(t)e^{-(\beta+i\omega)t}dt==$
+        + **$\mathscr{L}[f(t)]=\int_0^{+\infty}f(t)e^{-st}dt$**
+        + $f(t)$ is the reverse Laplace Tranformation of $F(s)$, signed $f(t)=\mathscr{L}^{-1}[F(s)]$
+        + $\mathscr{L}[f(t)]=\mathscr{F}[f_1(t)]=\mathscr{F}[f(t)e^{-\beta t}u(t)]$
+    + Examples:
+        + $\mathscr{L}[1]=\int_0^\infty e^{-st}dt=-\cfrac{1}{s}e^{-st}\bigg|_0^{+\infty}=-\cfrac{1}{s}e^{-\beta t}e^{-i\omega t}\bigg|_0^\infty=\cfrac{1}{s}$
+            + $\mathscr{L}^{-1}[\cfrac{1}{s}]=1$
+        + $\mathscr{L}[e^{\alpha t}]=\int_0^\infty e^{\alpha t-st}dt=\cfrac{1}{\alpha-s}e^{(\alpha-s)t}\bigg|_0^\infty=\cfrac{1}{s-a}$
+            + $\mathscr{L}^{-1}[\cfrac{1}{S-\alpha}]=e^{\alpha t}$
+        + $\mathscr{L}[\cos bt]=\mathscr{L}[\cfrac{e^{ibt}+e^{-ibt}}{2}]=\cfrac{1}{2}(\cfrac{1}{s-bi}+\cfrac{1}{s+bi})=\cfrac{s}{s^2+b^2}$
+            + $\mathscr{L}^{-1}[\cfrac{s}{s^2+b^2}]=\cos bt$
+            + * solve $\int_0^\infty e^{-3t}\cos tdt$
+                + $\mathscr{L}[\cos t]\bigg|_{s=3}=\int_0^\infty \cos te^{-st}dt=\cfrac{s}{s^2+1}\bigg|_{s=3}$
+        + $\mathscr{L}[\sin bt]=\mathscr{L}[\cfrac{e^{ibt}-e^{-ibt}}{2i}]=-\cfrac{i}{2}(\cfrac{1}{s-bi}-\cfrac{1}{s+bi})=\cfrac{b}{s^2+b^2}$
+            + $\mathscr{L}^{-1}[\cfrac{b}{s^2+b^2}]=\sin bt$
+        + $\mathscr{L}[t]=\int_0^\infty te^{-st}dt=\cfrac{1}{s^2}$
+            + $\mathscr{L}^{-1}[\cfrac{1}{s^2}]=t$
+        + $\mathscr{L}[t^2]=\cfrac{2!}{s^{3}}$
+            + $\mathscr{L}^{-1}[\cfrac{2!}{s^3}]=t^2$
+        + $\mathscr{L}[t^m]=\cfrac{m!}{s^{m+1}}$
+            + $\mathscr{L}^{-1}\cfrac{m!}{s^{m+1}}=t^m$
+    + Solve $\mathscr{L}^{-1}[\cfrac{Q(s)}{R(s)}]$
+        + Mini-
+            + $\cfrac{c_1}{s-a}$
+            + $\cfrac{c_2}{(s-a)^2}$
+            + $\cfrac{M_1s+N_1}{(s-\alpha)^2+\beta^2}$
+            + $\cfrac{M_2s+N_2}{(s-\alpha)^2+\beta^2}$
+        + 2 characteristics
+            + Linear
+                + $\mathscr{L}[\alpha f+\beta g]=\alpha F(s)+\beta G(s),\alpha,\beta\in C$
+                    + $\mathscr{L}^{-1}[\alpha F(s)+\beta G(s)]=\alpha\mathscr{L}^{-1}[F(s)]+\beta\mathscr{L}^{-1}[G(s)]$
+                + Example 1: 
+                    + $\mathscr{L}^{-1}[\cfrac{s}{(s^2+1)(s^2+9)}]=\cfrac{1}{8}\mathscr{L}^{-1}[(\cfrac{s}{s^2+1}-\cfrac{s}{s^2+9})]=\cfrac{1}{8}(\cos t-\cos 3t)$
+                + Example 2:
+                    + $\mathscr{L}^{-1}[\cfrac{1}{(s^2+1)(s^2+9)}]=\cfrac{1}{8}\mathscr{L}^{-1}[(\cfrac{1}{s^2+1}-\cfrac{3}{s^2+9})]=\cfrac{1}{8}(\sin t-\sin 3t)$
+            + Translate
+                + $\mathscr{L}[e^\alpha tf(t)]=F(s-\alpha)$
+                + $\mathscr{L}^{-1}[F(s-\alpha)]=e^{\alpha t}f(t)$
+                + Example 1:
+                    + $\mathscr{L}^{-1}[\cfrac{1}{s^2+4s+8}]=\mathscr{L}^{-1}[\cfrac{1}{(s+2)^2+4}]=(\alpha=-2)=e^{-2t}\mathscr{L}^{-1}[\cfrac{1}{s^2+4}]=e^{-2t}\sin 2t$
+                + Example 2:
+                    + $\mathscr{L}^{-1}[\cfrac{c_1}{(s-a)^2}]=c_1e^{at}\mathscr{L}^{-1}[\cfrac{1}{s^2}]=c_1te^{at}$
+                + $\mathscr{L}^{-1}[\cfrac{1}{(s-\alpha)^2+\beta^2}]=e^{\alpha t}\mathscr{L}^{-1}[\cfrac{1}{s^2+\beta^2}]=\cfrac{1}{\beta}e^{\alpha t}\sin\beta t$
+                + $\mathscr{L}^{-1}[\cfrac{s}{(s-\alpha)^2+\beta^2}]=\mathscr{L}^{-1}[\cfrac{s-\alpha}{(s-\alpha)^2+\beta^2}]+\alpha\mathscr{L}^{-1}[\cfrac{1}{(s-\alpha)^2+\beta^2}]=\cdots$
+                + $\mathscr{L}^{-1}[\cfrac{s}{[(s-\alpha)^2+\beta^2]^2}]=\mathscr{L}^{-1}[\cfrac{s-\alpha}{[(s-\alpha)^2+\beta^2]^2}]+\alpha\mathscr{L}^{-1}[\cfrac{1}{[(s-\alpha)^2+\beta^2]^2}]=???$ unknown
