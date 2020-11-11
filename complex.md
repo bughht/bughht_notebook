@@ -6,8 +6,8 @@
     $=2z$
 
 + $f(z)=\overline{z}, Re z, Im z, |z| \text{ continuous on }z$
-+ $ u(x,y) \text{is derivatable at }(x,y)\Leftrightarrow \Delta u=A\Delta x+B\Delta y+o(\sqrt{(\Delta x)^2+(\Delta y)^2})$ 
-+ $f(z)=u(x,y)+iv$
++ $u(x,y) \text{ is derivatable at }(x,y)\Leftrightarrow \Delta u=A\Delta x+B\Delta y+o(\sqrt{(\Delta x)^2+(\Delta y)^2})$ 
++ $f(z)=u(x,y)+iv(x,y)$
     + $u(x,y),v(x,y) \text{is differentiable at }(x,y)$
     + $u(x,y), v(x,y) \text{ supports } u_x=v_y, u_y=-v_x\textbf{  C-R Euqation}$
 + $\text{if f(z) is derivatable at z, }f'(x)=u_x+iv_x=v_y+iv_x=u_x+iu_y=v_y-iu_y$
@@ -284,7 +284,7 @@
                 + $(-\cfrac{1}{z+2})'=\sum (-1)^{n+1}(\cfrac{1}{z+1})^n(-\cfrac{1}{(z+1)^2})$
         + Integrate
             + $\oint_Cf(z)dz=\oint_{C_1}f(z)dz+\oint_{C_2}f(z)dz$
-            + $\oint_{C_1}f(z)dz ==\oint_{C}\sum_C_n(z-z_0)^n$
+            + $\oint_{C_1}f(z)dz ==\oint_{C}\sum_{C_n}(z-z_0)^n$
                 + $f(z)=\sum_{n=0}^\infty C_n(z-z_0)^n+\sum_{n=-\infty}^{-1}c_n(z-z_0)^n$
                     + **Analytic Part** + **Main Part**
             + $=\sum_{n=-\infty}^\infty \oint_{C_1}C_n(z-z_1)^ndz$
@@ -344,12 +344,12 @@
                     + $f(z)=\cfrac{\sin z}{z(e^z-1)}=\cfrac{\sin z}{z}\cdot \cfrac{1}{e^z-1}$
             + Essential Singularity 
                 + $f(z)=\cdots + \cfrac{C_{-m}}{(z-z_0)^m}+ \cdots$
-                + $z=0$, $f(z)=e^{\frac{1}{z}$, $\sin\cfrac{1}{z}$, $\cos \cfrac{1}{z}$
+                + $z=0$, $f(z)=e^{\frac{1}{z}}$, $\sin\cfrac{1}{z}$, $\cos \cfrac{1}{z}$
     + Residue of removable singularity: $Res[f(z),z_0]=C_{-1}=0$
         + $Res[\cfrac{z}{e^z-1}]=0$, $\oint_{|z|=10}\cfrac{z}{e^z-1}dz=2\pi i*$
     + Residue of essential singularity: solve with Laurent Expansion
         + Example: $f(z)=\cos\cfrac{1}{z}$
-            + $f(z)=1-\cfrac{1}{2!}(1\2)^2$
+            + $f(z)=1-\cfrac{1}{2!}(1/2)^2$
             + 0
         + Example: $f(z)=\cfrac{z^3}{1+z}e^{\cfrac{1}{z}}$
             + $z=0$
@@ -371,7 +371,7 @@
                     + $Res[\cfrac{e^z}{(z-1)^2(2z+1)},-\cfrac{1}{2}]=\lim\limits_{z\to-1/2}\cfrac{e^z}{(z-1)^2}$
             + Example $Res[\cfrac{z-1}{z(e^z-1)},0]$
                 + 2-order
-                + $=\lim_{z\to 0}{\cfrac{(z-1)z}{e^z-1}'$
+                + $=\lim_{z\to 0}({\cfrac{(z-1)z}{e^z-1}})'$
                 + $=\lim_{z\to 0}{\cfrac{(2z-1)(e^z-1)-z(z-1)e^z}{(e^z-1)^2}}$
                 + $=\cfrac{3}{2}$
             + Example $Res[\tan\pi z,k+\cfrac{1}{2}], I_3=\oint_{|z|=2}\tan \pi zdz$
@@ -392,7 +392,7 @@
             + $\int_0^{2\pi} R(\cos\theta,\sin\theta)d\theta=\oint_Cf(z)dz$
             + let $z=e^{i\theta}$
             + $\int_0^{2\pi}R(\cos\theta,\sin\theta)d\theta=\oint_{|z|=1}f(z)dz$
-                + $d\theta=\cfrac{1}{iz}}dz$
+                + $d\theta=\cfrac{1}{iz}dz$
                 + $\cos\theta=\cfrac{e^{i\theta}+e^{-i\theta}}{2}=\cfrac{z^2+1}{2z}$
                 + $\sin\theta=\cfrac{e^{i\theta-e^{-i\theta}}}{2i}=\cfrac{z^2-1}{2iz}$
             + $I=\oint_{|z|=1}R(\cfrac{z^2+1}{2z},\cfrac{z^2-1}{2iz})\cfrac{1}{2z}dz$
@@ -558,3 +558,47 @@
                 + $\mathscr{L}^{-1}[\cfrac{1}{(s-\alpha)^2+\beta^2}]=e^{\alpha t}\mathscr{L}^{-1}[\cfrac{1}{s^2+\beta^2}]=\cfrac{1}{\beta}e^{\alpha t}\sin\beta t$
                 + $\mathscr{L}^{-1}[\cfrac{s}{(s-\alpha)^2+\beta^2}]=\mathscr{L}^{-1}[\cfrac{s-\alpha}{(s-\alpha)^2+\beta^2}]+\alpha\mathscr{L}^{-1}[\cfrac{1}{(s-\alpha)^2+\beta^2}]=\cdots$
                 + $\mathscr{L}^{-1}[\cfrac{s}{[(s-\alpha)^2+\beta^2]^2}]=\mathscr{L}^{-1}[\cfrac{s-\alpha}{[(s-\alpha)^2+\beta^2]^2}]+\alpha\mathscr{L}^{-1}[\cfrac{1}{[(s-\alpha)^2+\beta^2]^2}]=???$ unknown
+            + Derivative
+                + Assume that $\mathscr{L}[f(t)]=F(s)$, then $F'(s)=-\mathscr{L}[tf(t)]$
+                + $\Rightarrow\mathscr{L}^{-1}[F'(s)]=-tf(t)$
+                + Generally, $F^{(n)}(s)=(-1)^n\mathscr{L}[t^n f(t)]$
+                + $\Rightarrow\mathscr{L}^{-1}[F^{(n)}(s)]=(-1)^nt^nf(t)$
+                + Example $\mathscr{L}^{-1}[\cfrac{s}{(s^2+1)^2}]$
+                    + $=\mathscr{L}^{-1}[(-\cfrac{1}{2}\cfrac{1}{s^2+1})']=-t\mathscr{L}^{-1}[-\cfrac{1}{2}\cfrac{1}{s^2+1}]=\cfrac{t}{2}\sin t$
+                + Example $\mathscr{L}^{-1}[\cfrac{s}{(s^2+\beta^2)^2}]=\mathscr{L}^{-1}[(\cfrac{1}{2}\cfrac{1}{s^2+\beta^2})']=\cfrac{t}{2\beta}\sin\beta t$
+                + Example $\mathscr{L}[t\sin\omega t]$
+                    + $=-(\mathscr{L}[\sin\omega t])'=-(\cfrac{\omega}{s^2+\omega^2})'=\cfrac{2s\omega}{(s^2+\omega^2)^2}$
+                + Example $\mathscr{L}[e^{-3t}t\sin\omega t]$
+                    + $=F(s+3)$
+                    + $F(s)=\cfrac{2s\omega}{(s^2+\omega^2)^2}$
+                    + $=F(s+s)=\cfrac{2(s+3)\omega}{((s+3)^2+\omega^2)^2}$
+            + Differential
+                + Assume that $\mathscr{L}[f(t)]=F(s)$, then $\mathscr{L}[f'(t)]=sF(s)-f(0)$
+                + $\mathscr{L}[f^{(n)}(t)]=s^nF(s)-s^{n-1}f(0)-s^{n-2}f'(0)-\cdots-f^{(n-1)}(0)$
+                + Especially when $f(0)=f'(0)=f^{(n-1)}(0)=0$, $\mathscr{L}[f^{(n)}(t)]=s^nF(s)$
+                + **Example Important** $\begin{cases} y''+3y'+2y=2e^{-t}\cos t\\
+                y(0)=y'(0)=0\\\end{cases}$
+                    + $Y(s)=\mathscr{L}[y(t)]$
+                    + then $\mathscr{L}[y'(t)]=sY(s)$
+                    + $\mathscr{L}[y''(t)]=s^2Ys$
+                    + $\mathscr{L}[2e^{-t}\cos t]=2\cfrac{s+1}{(s+1)^2+1}$
+                    + $(s^2+3s+2)Y(s)=\cfrac{s+1}{(s+1)^2+1}$
+                    + $Y(s)=\cfrac{1}{((s+1)^2+1)(s+2)}$
+                    + $\Rightarrow y(t)=\mathscr{L}^{-1}[Y(s)]=\mathscr{L}^{-1}[\cfrac{1}{s+2}-\cfrac{s}{(s+1)^2+1}]=e^{-2t}+e^{-t}(\cos t-\sin t)$
+                + Example $\begin{cases}y''(t)-y(t)=4\sin t+5\cos 2t\\y(0)=-1, y'(0)=-2\\\end{cases}$
+                    + $Y(s)=\mathscr{L}[y(t)]$, $\mathscr{L}[y''(t)]=s^2Y(s)+2$
+                    + $-sy(0)-y'(0)=S^2Y(s)+s+2$
+                    + $\mathscr{L}[4\sin t+ 5\cos 2t]=\cfrac{4}{s^2+1}+\cfrac{5s}{s^2+4}$
+                    + $(s^2-1)Y(s)+s+2=\cfrac{4}{s^2+1}+\cfrac{5s}{s^2+4}$
+                    + $Y(s)=\cfrac{4}{(s^2+1)(s^2-1)}+\cfrac{5s}{(s^2+4)(s^2-1)}-\cfrac{s+2}{s^2-1}=-\cfrac{2}{s^2+1}-\cfrac{s}{s^2+4}$
+                    + $y(t)=\mathscr{L}^{-1}[Y(s)]=-2\sin t-\cos 2t$
+            + Integral
+                + Assume that $\mathscr{L}[f(t)]=F(s)$, then $\mathscr{L}[\int_0^t f(t)dt]=\cfrac{F(s)}{s}$
+                + $\Rightarrow \mathscr{L}^{-1}[\cfrac{F(s)}{s}]=\int_0^tf(t)dt$, where $f(t)=\mathscr{L}^{-1}[F(s)]$
+                + Example $\mathscr{L}^{-1}[\cfrac{1}{(s^2+\beta^2)^2}]$
+                    + $=\mathscr{L}^{-1}[\cfrac{s}{(s^2+\beta^2)^2\cfrac{1}{s}}]=\int_0^tf(t)dt$
+                    + $f(t)=\mathscr{L}^{-1}[\cfrac{1}{(s^2+\beta^2)^2}]=\cfrac{1}{2\beta}t\sin \beta t$
+                    + $I=\int_0^t\cfrac{1}{2\beta}t\sin\beta\tau d\tau=\cfrac{1}{2\beta}(-\cfrac{1}{\beta})[\tau\cos\beta\tau\big|_0^t-\int_0^t\cos\beta\tau d\tau]=-\cfrac{1}{2\beta^2}[t\cos\beta t-\cfrac{1}{\beta}\sin\beta t]$
+        + Examples:
+            + $\mathscr{L}^{-1}\cfrac{s}{(s^2+1)(s^2+0)}$
+
