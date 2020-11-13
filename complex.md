@@ -1,3 +1,69 @@
+# Review
++ $Lnz=ln|z|+iargz+2k\pi i (k\in Z)=ln|z|+iArgz$
++ $lnz=ln|z|+iargz\quad -\pi<argz\leq\pi$
+    + $arg z=\arctan\cfrac{y}{x}$ 
++ $e^z=e^{z+2k\pi i}\quad (k\in Z)$
+    + $e^{Lnz}=e^{lnz}=z$
+    + Example: $(1+i)^n=(1-i)^n$
++ $z^\alpha=e^{\alpha(ln|z|+iargz+2k\pi i)}$
++ $\sin z=\cfrac{e^{iz}-e^{-iz}}{2i}\qquad \cos z=\cfrac{e^{iz}+e^{-iz}}{2}$
+    + 复数计算展开到$a+bi$
++ $f(z)=zImz$在复平面处处连续
++ 可导的充分条件：
+    + $u_x,u_y,v_x,v_y$在$(x,y)$连续，且在$(x,y)$满足C-R方程，则$f(z)$在$z=x+iy$可导，且$f'(z)=u_x+iv_x=v_y+iv_x=u_x-iu_y=v_y-iu_y$
++ 解析函数
+    + 所有解析点的合集必为开集，不可能仅在一个点或一条曲线上解析
+    + 平面上处处解析的函数
+        + $f(z)=e^z,z^n,\sin z,\cos z$
+    + 处处不解析的函数
+        + $f(z)=Rez,Imz,|z|,\overline{z},z|z|$
+    + $\oint_{|z|=1}Rezdz$:参数方程求解
++ 调和函数
+    + $u_{xx}+u_{yy}=0$
+    + Example $u=x^2-y^2+xy$
+        + $u_x=2x+y,\quad u_y=-2y+x$
+        + $u_{xx}=2,\qquad u_{xy}=1,\qquad u_{yx}=1,\qquad u_{yy}=-2$
+        + $u_xx+u_yy=0$, 调和
++ 复积分
+    + 非闭区间
+        + 参数方程法
+            + $\int_Cf(z)dz=\int_a^bf(z(t))z'(t)dt$
+            + Example $\int_CRezdz$, $C=1-i$ to $3+2i$直线段
+                + $C:(2t+1)+i(3t-1)$
+                + $I=\int_0^1(2t+1)(2+3i)dt$
+            + Example $\int_C|z|dz$, C:上半单位圆周线，起点-1
+                + $C:z=e^{i\theta}, \theta:\pi\to 0$
+                + $|z|=1$
+                + $I=\int_\pi^0 1(ie^{i\theta})d\theta=e^{i\theta}\big|_\pi^0=2$
+        + 牛顿-莱布尼兹公式
+    + 周线积分
+        + 参数方程
+            + Example $\oint_{|z|=2}(Rez+e^z)dz$
+                + $I=\oint_{|z|=2}Rezdz+\oint_{|z|=2}e^zdz=\oint_{|z|=2}Rezdz$
+                + $\int_0^{2\pi}2\cos\theta ie^{i\theta}d\theta=\cdots$
+        + 推广的柯西积分定理
+        + 柯西积分公式
+            + $\oint_C\cfrac{f(z)}{(z-z_0)^{n+1}}dz=\cfrac{2\pi i}{n!}f^{(n)}(z_0)$
+                + Example $I=\oint_C\cfrac{e^z}{z(z-1)^2}dz, C:x^2+y^2=4x+5$
+                    + $C:(x-2)^2+y^2=3^2$
+                    + $I=\oint_{C_1}\cfrac{\frac{e^z}{(z-1)^2}}{z}dz+\oint_{C_2}\cfrac{\frac{e^z}{z}}{(z-1)^2}$
+        + 留数定理
+            + $\oint_Cf(z)dz=2\pi i\sum\limits_{k=1}^n Res[f(z),z_k]$
+            + $Res[f(z),z_k]:$ f(z)在$z_k$去心邻域的洛朗展开中$\cfrac{1}{z-z_k}$系数$C_{-1}$
+            + 本性奇点
+                + $I=\oint_{|z|=1}ze^{-\cfrac{1}{z^2}}dz=2\pi i Res[ze^{-\cfrac{1}{z^2}},0]$
+            + 可去奇点
+            + 极点
+                + 洛朗展开求留数
+                + $Res[f(z),z_0]=\cfrac{1}{(m-1)!}\lim\limits_{z\to z_0}\cfrac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]$
+            + 留数定理应用
+        + 泰勒展开
+            + Example: $f(z)=\cfrac{z}{z^2+z-2}$, $z_0=3$
+                + $f(z)=\cfrac{z}{(z-2)(z-1)}=\cfrac{a}{z+2}+\cfrac{b}{z-1}$
+                
+
+
+# Class 
 + $f'(z_0)=\lim_{\Delta z\to 0}\cfrac{\Delta w}{\Delta z}$
 + $\cfrac{\Delta w}{\Delta z}=f'(z_0)+\eta(\Delta z)\Delta z$
 + $Prove  f(z)=z^2 \text{is derivatable and } (z^2)'=2z$
@@ -61,7 +127,7 @@
     + $Ci=i$
     + $C=1$
 + Primary Analytic Function
-    + $w=e^z=e^x(cos y+i sin(y))$
+    + $w=e^z=e^{x(cos y+i sin(y))}$
         + $z=|z|=(cos \theta +i\sin\theta)=|z|e^{i\theta}$
         + $(e^z)'=e^z$
         + $|e^z|=e^x>0$
@@ -87,7 +153,7 @@
         + Example: solve $lnz=1+\pi i$
             + $z=e^{1+\pi i}$
             + $z=e\cdot(cos \pi + isin \pi)=-e$
-    + $e^{iy}=cosy+isiny$ and $e^{-iy}=cosy-isiny$
+    + $\begin{cases}e^{iy}=\cos y+i\sin y\\e^{-iy}=\cos y-i\sin y\\\end{cases}$
         + $sin z=\cfrac{1}{2i}(e^{iz}-e^{-iz})$
         + $cos z=\cfrac{1}{2}(e^{iz}+e^{-iz})$
         + zero point of $sin z$ is $z=k\pi, k\in Z$
@@ -109,13 +175,13 @@
             + $\int_Cf(z)dz$ can be simplified into real variable function.
         + Parametric Equation
             + $z(t)=x(t)+iy(t)\qquad t: a\rightarrow b$ 
-        + **(Important!)**Parametric Equation method: *$\int_Cf(z)dz=\int_a^bf(z(t))z'(t)dt$
+        + **(Important!)** Parametric Equation method: *$\int_Cf(z)dz=\int_a^bf(z(t))z'(t)dt$
         + Example:
-            + Prove: $I_n=\oint_C\cfrac{dz}{(z-z_0)^n}=2\pi i,\quad(n=1)\text{ or }0,\quad(n\in Z^+,n\not ={1})$ where $C:|z-z_0=r(>0)$
+            + Prove: $I_n=\oint_C\cfrac{dz}{(z-z_0)^n}=\begin{cases}2\pi i & n=1\\0& n\in Z^+,\quad n\not ={0}\\\end{cases}$ where $C:|z-z_0|=r\quad(r>0)$
                 + $z(\theta)=z_0+re^{i\theta}$
                 + $\oint_C\cfrac{1}{(z-z_0)^n}dz=\int_0^{2\pi}ir^{1-n}e^{i(1-n)\theta}d\theta$
                 + $=ir^{1-n}\int_0^{2\pi}e^{i(1-n)\theta}d\theta=$ then split it into sin and cos.
-        + $|\int_Cf(z)dz|\leqslant\int_C|f(z)|ds$
+        + $|\oint_Cf(z)dz|\leqslant\oint_C|f(z)|ds$
 + Cauchy Integral Theorm
     + $f(z)$ integral in D is unrelated to path$\Leftrightarrow$ $\oint_lf(z)dz=0$
     + If $F(z)$ is analytic in single connected region $D$, $\oint_Cf(z)dz=0$ for any contour $C$ in $D$.
@@ -147,8 +213,7 @@
     + $C: $ contour
         + Parameter
         + Cauchy Theory
-        + Important Integral: $\int_c\cfrac{1}{(z-z_0)^n}dz=2\pi i(n=1)$ or $0$ ($n\not =1, n\in Z$)
-            + $C:|z-z_0|=r>0$
+        + Important Integral: $\oint_C\cfrac{dz}{(z-z_0)^n}=\begin{cases}2\pi i & n=1\\0& n\in Z^+,\quad n\not ={0}\\\end{cases}(C:|z-z_0|=r>0)$
 + Cauchy Integral Formula
     + If $f(z)$ is analytic in $D$ surrounded by contour $C$, continuous on $C$ and $D$, for all $z_0\in D$,
         + $f(z_0)=\cfrac{1}{2\pi i}\oint_C\cfrac{f(z)}{z-z_0}dz$
@@ -595,10 +660,28 @@
             + Integral
                 + Assume that $\mathscr{L}[f(t)]=F(s)$, then $\mathscr{L}[\int_0^t f(t)dt]=\cfrac{F(s)}{s}$
                 + $\Rightarrow \mathscr{L}^{-1}[\cfrac{F(s)}{s}]=\int_0^tf(t)dt$, where $f(t)=\mathscr{L}^{-1}[F(s)]$
+                + $\mathscr{L}^{-1}[F'(s)]=-tf(t)$
                 + Example $\mathscr{L}^{-1}[\cfrac{1}{(s^2+\beta^2)^2}]$
                     + $=\mathscr{L}^{-1}[\cfrac{s}{(s^2+\beta^2)^2\cfrac{1}{s}}]=\int_0^tf(t)dt$
                     + $f(t)=\mathscr{L}^{-1}[\cfrac{1}{(s^2+\beta^2)^2}]=\cfrac{1}{2\beta}t\sin \beta t$
                     + $I=\int_0^t\cfrac{1}{2\beta}t\sin\beta\tau d\tau=\cfrac{1}{2\beta}(-\cfrac{1}{\beta})[\tau\cos\beta\tau\big|_0^t-\int_0^t\cos\beta\tau d\tau]=-\cfrac{1}{2\beta^2}[t\cos\beta t-\cfrac{1}{\beta}\sin\beta t]$
+                + Example $I_1=\mathscr{L}[\int_0^t e^{-3t}t\sin 2t dt]$
+                    + $f(t)=e^{-3t} t\sin 2t$
+                    + $g(t)=t\sin 2t$
+                    + $I_1=\mathscr{L}[f(t)]=\mathscr{L}[e^{-3t}t\sin 2t]=G(s+3)$
+                    + $h(t)=\sin 2t$
+                    + $G(s)=\mathscr{L}[g(t)]=-H'(s)$
+                    + $H(s)=\mathscr{L}[\sin 2t]=\cfrac{2}{s^2+4}$
+                    + $G(s)=\cfrac{4s}{s^2+4}$
+                    + $F(s)=\cfrac{4s+3}{(s+3)^2+4}$
+                    + $I_1=\cfrac{F(s)}{s}$
+                + Example $I_2=\mathscr{L}[e^{-3t}\int_0^t t\sin 2t dt]$
+                    + $I_2=\mathscr{L}[e^{-3t}f(t)]=F(s+3)$
+                    + $F(s)=\mathscr{L}[f(t)]=\mathscr{L}[\int_0^tg(t)dt]=\cfrac{G(s)}{s}$
+                    + $G(s)=\mathscr{L}[\sin 2t]=\cfrac{4s}{s^2+4}$
+                + Example $I_3=\mathscr{L}[t\int_0^t e^{-3t}\sin 2t dt]$ 
+                    + $F(s)=\mathscr{L}[g(t)]=\cfrac{G(s)}{s}$
+                    + $G(s)=\mathscr{L}[e^{-3t}\sin 2t]=\cfrac{2}{(s+3)^2+4}$
+                + Example $\int_0^\infty\cfrac{1-\cos t}{t}e^{-t}dt=\mathscr{L}[\cfrac{1-\cos t}{t}]\big|_{s=1}$
         + Examples:
             + $\mathscr{L}^{-1}\cfrac{s}{(s^2+1)(s^2+0)}$
-
