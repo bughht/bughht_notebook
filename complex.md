@@ -58,10 +58,23 @@
                 + $Res[f(z),z_0]=\cfrac{1}{(m-1)!}\lim\limits_{z\to z_0}\cfrac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]$
             + 留数定理应用
         + 泰勒展开
-            + Example: $f(z)=\cfrac{z}{z^2+z-2}$, $z_0=3$
-                + $f(z)=\cfrac{z}{(z-2)(z-1)}=\cfrac{a}{z+2}+\cfrac{b}{z-1}$
-                
-
+            + $e^z=\sum\limits_{n=0}^\infty\cfrac{z^n}{n!},\quad |z|<\infty$
+            + $\sin(z)=\sum\limits_{n=0}^\infty (-1)^n\cfrac{z^{2n+1}}{(2n+1)!}$
+            + $\cos(z)=\sum\limits_{n=0}^\infty(-1)^n\cfrac{z^2n}{(2n)!}$
+            + $\cfrac{1}{1-z}=\sum\limits_{n=0}^\infty z^n,\quad |z|<1$
+            + $\cfrac{1}{1+z}=\sum\limits_{n=0}^\infty (-1)^nz^n,\quad |z|<1$
+            + $\cfrac{1}{1-z^2}=\sum\limits_{n=0}^\infty z^{2n},\quad |z|<1$
+            + $\cfrac{1}{1+z^2}=\sum\limits_{n=0}^\infty (-1)^n z^{2n},\quad |z|<1$
+        + 洛朗展开
+            + $e^{\frac{1}{z}}=1+\cfrac{1}{z}+\cfrac{1}{2!}(\cfrac{1}{z})^2+\cdots+\cfrac{1}{n!}(\cfrac{1}{z})^n+\cdots,\qquad 0<|z|<+\infty$
+            + $\sin\cfrac{1}{z}=\cfrac{1}{z}-\cfrac{1}{3!}\cfrac{1}{z^3}+\cdots+(-1)^n\cfrac{1}{(2n+1)!}(\cfrac{1}{z})^{2n+1}+\cdots,\qquad 0<|z|<+\infty$
+            + $\cos\cfrac{1}{z}1-\cfrac{1}{2!}\cfrac{1}{z^2}+\cdots+(-1)^n\cfrac{1}{(2n)!}(\cfrac{1}{z})^{2n}+\cdots,\qquad 0<|z|<+\infty$
+        + 傅里叶变换
+            + $F(\omega)=\mathscr{F}[f(t)]=\int_{-\infty}^\infty f(t)e^{-i\omega t}dt,\qquad T\to \infty$
+            + $f(t)=\mathscr{F}^{-1}[F(\omega)]=\cfrac{1}{2\pi}\int_{-\infty}^\infty F(\omega)e^{i\omega t}d\omega$
+            + $\mathscr{F}[\delta(t)]=1$
+            + $\mathscr{F}[e^{i\omega_0 t}]=2\pi\delta(\omega-\omega_0)$
+            + $\mathscr{F}[e^{i\omega_0 t}f(t)]=F(\omega-\omega_0)$
 
 # Class 
 + $f'(z_0)=\lim_{\Delta z\to 0}\cfrac{\Delta w}{\Delta z}$
@@ -536,11 +549,11 @@
             + $\mathscr{F}[f(t-t_0)]=e^{-i\omega t_0}\mathscr{F}[f]$
             + $\mathscr{F}[e^{i\omega_0t}f(t)]=F(\omega-\omega_0)$
             + Example $\mathscr{F}[\delta(t-2)]$
-                + $=e^{-i\omega 2}$
-            + Example $\mathscr{F}[\cos\omega_0(t-1)]=e^{i\omega}\pi(\delta(\omega-\omega_0)+)$
+                + $=e^{i\omega 2}$
+            + Example $\mathscr{F}[\cos\omega_0(t-1)]=e^{i\omega}\pi(\delta(\omega-\omega_0)+\delta(\omega+\omega_0))$
             + Example $\mathscr{F}[f(t)\cos\omega_0t]=\mathscr{F}[f(t)\cfrac{e^{i\omega_0t}+e^{-i\omega_0t}}{2}]=\cfrac{1}{2}F(\omega-\omega_0)+\cfrac{1}{2}F(\omega+\omega_))$
         + Similarity
-            + assume that $a\not ={0}, $\mathscr{F}[f(at)]=\cfrac{1}{|a|}F(\cfrac{\omega}{a})$
+            + assume that $a\not ={0}$, $\mathscr{F}[f(at)]=\cfrac{1}{|a|}F(\cfrac{\omega}{a})$
         + differential
             + If $\lim\limits_{|t|\to\infty}f(t)=0$,then
             + $\mathscr{F}[f'(t)]=i\omega\mathscr{F}[f]$
