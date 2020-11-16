@@ -75,6 +75,22 @@
             + $\mathscr{F}[\delta(t)]=1$
             + $\mathscr{F}[e^{i\omega_0 t}]=2\pi\delta(\omega-\omega_0)$
             + $\mathscr{F}[e^{i\omega_0 t}f(t)]=F(\omega-\omega_0)$
+            + $\mathscr{F}[f^{(n)}(t)]=(i\omega)^n\mathscr{F}[f]$
+            + $\cfrac{d^nF(\omega)}{d\omega^n}=(-i)^n\mathscr{F}[t^nf(t)]$
+        + 拉普拉斯变换
+            + $F(s)=\mathscr{L}[f(t)]=\int_0^{+\infty}f(t)e^{-st}dt$
+            + $\mathscr{L}[1]=\cfrac{1}{s}$
+            + $\mathscr{L}[e^{at}]=\cfrac{1}{s-a}$
+            + $\mathscr{L}[\sin bt]=\cfrac{b}{s^2+b^2}$
+            + $\mathscr{L}[\cos bt]=\cfrac{s}{s^2+b^2}$
+            + $\mathscr{L}[t]=\cfrac{1}{s^2}$
+            + $\mathscr{L}[t^2]=\cfrac{2!}{s^3}$
+            + $\mathscr{L}[t^n]=\cfrac{n!}{s^{n+1}}$
+            + $\mathscr{L}[\alpha f+\beta g]=\alpha F(s)+\beta G(s)$
+            + $\mathscr{L}[e^{at}f(t)]=F(s-a)$
+            + $\mathscr{L}[t^nf(t)]=(-1)^n F^{(n)}(s)$
+            + $\mathscr{L}[\int_0^tf(t)dt]=\cfrac{F(s)}{s}$
+            + $\mathscr{L}[f^{(n)}(t)]=s^nF(s)-s^{n-1}f(0)-s^{n-2}f'(0)-\cdots-f^{(n-1)}(0)$
 
 # Class 
 + $f'(z_0)=\lim_{\Delta z\to 0}\cfrac{\Delta w}{\Delta z}$
